@@ -1,0 +1,18 @@
+- name: Add users using variables in Ansible
+  hosts: ansible_host_1,ansible_host_2,ansible_host_3
+  become: yes
+  vars_files:
+  - vars/users.yaml
+  tasks:
+  - name: Add the developers group first using variables before adding the user
+    group:
+      name: "{{ assignment_group }}"
+      state: present
+  - name: Add the user 'ahmed' with a specific uid and a primary group of 'developers' using variables
+    user:
+      name: "{{ assignment_user_name }}"
+      uid: "{{ assignment_user_id }}"
+      state: present
+      groups: "{{ assignment_group }}"
+      append: yes
+ 

@@ -1,0 +1,13 @@
+- name: Playbook to create users conditionally based on roles
+  hosts: Prod,Dev
+  become: yes
+  vars_files:
+  - vars/users.yaml
+  tasks:
+  - name: create users on hosts based on user role is developer
+    user:
+      name: "{{ item.name }}"
+      state: present
+      shell: /bin/bash
+    loop: "{{ assignment_users }}"
+    when: (item.role == 'developer' and 'Dev' in group_names) or (item.role == 'ops' and 'Prod' in group_names)

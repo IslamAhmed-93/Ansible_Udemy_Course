@@ -1,0 +1,12 @@
+- name: Playbook To Cretae a directory and copy a file content under it
+  hosts: all
+  become: yes
+  tasks:
+  - name: create a data directory
+    file:
+      path: /opt/data
+      state: directory
+  - name: Copy file content under the direcotry
+    copy:
+      content: "Top Secret\n"
+      dest: /opt/data/secret.txt

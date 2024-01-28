@@ -1,0 +1,19 @@
+- name: Play For file management
+  hosts: ansible_host_1
+  tasks:
+  - name: hello file is copied 
+    copy:
+      content: "Hello System Admins" 
+      dest: /tmp/hello.txt
+  - name: hi file is copied    
+    copy:
+      content: "Hi System Admins"
+      dest: /tmp/hi.txt
+  - name: archive hh is created
+    archive:
+      path:
+      - /tmp/hello.txt
+      - /tmp/hi.txt
+      dest: /tmp/hh.zip
+      format: zip
+

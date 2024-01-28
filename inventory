@@ -1,0 +1,11 @@
+ansible_host_1 
+ansible_host_2
+ansible_host_3
+
+[Prod]
+ansible_host_1
+ansible_host_2
+
+[Dev]
+ansible_host_3
+

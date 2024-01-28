@@ -1,0 +1,12 @@
+- name: playbook for displaying ansible_fatcs and discover them
+  hosts: ansible_host_2
+  #gather_facts: no
+  become: yes
+  tasks:
+  - name: print ansible_facts
+    debug:
+      var: ansible_facts
+  - name: copy ansible_facts parameters to a file
+    copy:
+      content: "{{ ansible_facts }}"
+      dest: /tmp/task2-gatherfacts

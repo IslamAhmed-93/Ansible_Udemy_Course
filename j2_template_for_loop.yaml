@@ -1,0 +1,28 @@
+- name: play to test jinja2 templates for loop
+  hosts: Prod,Dev
+  vars:
+    app_pages:
+    - home
+    - login
+    - logout
+    app_users:
+    - name: ahmed
+      password: ahmed123
+      role: developer
+    - name: moaz
+      password: mouath123
+      role: developer
+    - name: ali
+      password: aliali123
+      role: ops
+    - name: omar
+      password: omar123
+      role: ops
+
+  tasks:
+  - name: copy some formatted ansible_facts parameters to a file
+    template:
+      src: app_pages.conf
+      dest: /tmp/app_report.conf
+
+ 

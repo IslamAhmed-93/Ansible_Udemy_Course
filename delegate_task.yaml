@@ -1,0 +1,10 @@
+---
+- name: playbook to show to use delegat_to
+  hosts: Dev
+  tasks:
+  - name: string id copied to a file
+    copy:
+      content: This message is while targetting inventory files
+      dest: /tmp/message.txt
+    delegate_to: localhost
+

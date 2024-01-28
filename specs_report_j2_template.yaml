@@ -1,0 +1,9 @@
+- name: Playbook to get specs of all hosts and then copies them to a file
+  hosts: all
+  become: yes
+  tasks:
+  - name: copy some formatted ansible_facts parameters to a file
+    template:
+      src: specs_report.conf 
+      dest: /tmp/specs.report
+

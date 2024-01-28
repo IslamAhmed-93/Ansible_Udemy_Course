@@ -1,0 +1,9 @@
+---
+- name: playbook to show to use delegat_to
+  hosts: Dev
+  tasks:
+  - name: download file from a github api link and delegate it to localhots instead of DEV hosts
+    uri:
+      url: https://api.github.com/users/IslamAhmed-93/repos
+      dest: /tmp/git-repos.json
+    delegate_to: localhost

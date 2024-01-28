@@ -1,0 +1,28 @@
+- name: deploy web server using Ansible
+  hosts: Prod,Dev
+  become: yes
+  vars:
+  - webserver: nginx
+  - webserver_root_dir: /var/www/html
+  tasks:
+  - name: web server is installed
+    package:
+      name: "{{ webserver }}"
+      state: present
+  - name: web service is up and running
+    service:
+      name: "{{ webserver }}"
+      state: started
+  - name: web server root directory exists
+    file:
+      path: "{{ webserver_root_dir }}"
+      state: directory
+  - name: static web site is deployed
+    uri:
+      url: https://raw.githubusercontent.com/abdennour/example-static-website/{{ git_branch }}/index.html
+      dest: "{{ webserver_root_dir }}" #/ /usr/share/nginx/html
+  - name: login Page is deployed
+    uri:
+      url: https://raw.githubusercontent.com/abdennour/example-static-website/{{ git_branch }}/login.html
+      dest: "{{ webserver_root_dir }}" #/ /usr/share/nginx/html
+    when: git_branch == 'ansible-course'

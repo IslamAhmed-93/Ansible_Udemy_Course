@@ -1,0 +1,9 @@
+- name: Playbook to create a new  user
+  hosts: ansible_host_2
+  become: yes
+  tasks:
+  - name: create odoo user on host
+    user:
+      name: odoo
+      state: present
+

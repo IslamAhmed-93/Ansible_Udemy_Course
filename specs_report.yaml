@@ -1,0 +1,17 @@
+- name: Playbook to get specs of all hosts and then copies them to a file
+  hosts: all
+  become: yes
+  tasks:
+  - name: print ansible_facts
+    debug:
+      var: ansible_facts
+  - name: copy some formatted ansible_facts parameters to a file
+    copy:
+      content: | 
+        "Distribution : <{{ ansible_facts.distribution }}>"
+        "Distribution Release :  <{{ ansible_facts.distribution_release }}>"
+        "Distribution Version  : <{{ ansible_facts.distribution_version }}>"
+        "Nbre CPU core          : <{{ ansible_facts.processor_cores }}> cores"
+        "Total Memory            : <{{ ansible_facts.memtotal_mb }}> MB"
+      dest: /tmp/specs.report
+

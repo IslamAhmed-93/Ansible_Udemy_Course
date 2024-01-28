@@ -1,0 +1,9 @@
+- name: Playbook to configure ubuntu /etc/hosts file to resolve dns entries for other hosts
+  hosts: all
+  become: yes
+  tasks:
+  - name: copy some formatted ansible_facts parameters to a file
+    template:
+      src: hosts.conf
+      dest: /etc/hosts
+
