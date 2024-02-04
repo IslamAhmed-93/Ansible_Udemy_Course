@@ -1,5 +1,5 @@
 - name: playbook for displaying ansible_fatcs and discover them
-  hosts: ansible_host_2
+  hosts: ansible_host_1
   #gather_facts: no
   become: yes
   tasks:
