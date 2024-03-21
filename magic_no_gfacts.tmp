@@ -1,0 +1,562 @@
+
+PLAY [play for display magic variables] ****************************************
+
+TASK [print inventory_hostname] ************************************************
+ok: [ansible_host_1] => {
+    "inventory_hostname": "ansible_host_1"
+}
+ok: [ansible_host_2] => {
+    "inventory_hostname": "ansible_host_2"
+}
+ok: [ansible_host_3] => {
+    "inventory_hostname": "ansible_host_3"
+}
+
+TASK [print hostvars] **********************************************************
+ok: [ansible_host_1] => {
+    "hostvars": {
+        "ansible_host_1": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.8",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course-index-v2",
+            "group_names": [
+                "Prod"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_1",
+            "inventory_hostname_short": "ansible_host_1",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        },
+        "ansible_host_2": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.7",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course-index-v2",
+            "group_names": [
+                "Prod"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_2",
+            "inventory_hostname_short": "ansible_host_2",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        },
+        "ansible_host_3": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.6",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course",
+            "group_names": [
+                "Dev"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_3",
+            "inventory_hostname_short": "ansible_host_3",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        }
+    }
+}
+ok: [ansible_host_2] => {
+    "hostvars": {
+        "ansible_host_1": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.8",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course-index-v2",
+            "group_names": [
+                "Prod"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_1",
+            "inventory_hostname_short": "ansible_host_1",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        },
+        "ansible_host_2": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.7",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course-index-v2",
+            "group_names": [
+                "Prod"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_2",
+            "inventory_hostname_short": "ansible_host_2",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        },
+        "ansible_host_3": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.6",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course",
+            "group_names": [
+                "Dev"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_3",
+            "inventory_hostname_short": "ansible_host_3",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        }
+    }
+}
+ok: [ansible_host_3] => {
+    "hostvars": {
+        "ansible_host_1": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.8",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course-index-v2",
+            "group_names": [
+                "Prod"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_1",
+            "inventory_hostname_short": "ansible_host_1",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        },
+        "ansible_host_2": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.7",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course-index-v2",
+            "group_names": [
+                "Prod"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_2",
+            "inventory_hostname_short": "ansible_host_2",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        },
+        "ansible_host_3": {
+            "ansible_check_mode": false,
+            "ansible_config_file": "/home/ansible-master/ansible_course/ansible.cfg",
+            "ansible_diff_mode": false,
+            "ansible_facts": {},
+            "ansible_forks": 5,
+            "ansible_host": "10.0.2.6",
+            "ansible_inventory_sources": [
+                "/home/ansible-master/ansible_course/inventory"
+            ],
+            "ansible_playbook_python": "/usr/bin/python3",
+            "ansible_private_key_file": "/home/ansible-master/.ssh/ansibleuser",
+            "ansible_run_tags": [
+                "all"
+            ],
+            "ansible_skip_tags": [],
+            "ansible_ssh_user": "ansibleuser",
+            "ansible_verbosity": 0,
+            "ansible_version": {
+                "full": "2.13.3",
+                "major": 2,
+                "minor": 13,
+                "revision": 3,
+                "string": "2.13.3"
+            },
+            "git_branch": "ansible-course",
+            "group_names": [
+                "Dev"
+            ],
+            "groups": {
+                "Dev": [
+                    "ansible_host_3"
+                ],
+                "Prod": [
+                    "ansible_host_1",
+                    "ansible_host_2"
+                ],
+                "all": [
+                    "ansible_host_1",
+                    "ansible_host_2",
+                    "ansible_host_3"
+                ],
+                "ungrouped": []
+            },
+            "inventory_dir": "/home/ansible-master/ansible_course",
+            "inventory_file": "/home/ansible-master/ansible_course/inventory",
+            "inventory_hostname": "ansible_host_3",
+            "inventory_hostname_short": "ansible_host_3",
+            "omit": "__omit_place_holder__f8593d9dacd4f19c4f1f0738d285291f93eca948",
+            "playbook_dir": "/home/ansible-master/ansible_course"
+        }
+    }
+}
+
+TASK [print group_names] *******************************************************
+ok: [ansible_host_1] => {
+    "group_names": [
+        "Prod"
+    ]
+}
+ok: [ansible_host_2] => {
+    "group_names": [
+        "Prod"
+    ]
+}
+ok: [ansible_host_3] => {
+    "group_names": [
+        "Dev"
+    ]
+}
+
+TASK [print groups] ************************************************************
+ok: [ansible_host_1] => {
+    "groups": {
+        "Dev": [
+            "ansible_host_3"
+        ],
+        "Prod": [
+            "ansible_host_1",
+            "ansible_host_2"
+        ],
+        "all": [
+            "ansible_host_1",
+            "ansible_host_2",
+            "ansible_host_3"
+        ],
+        "ungrouped": []
+    }
+}
+ok: [ansible_host_2] => {
+    "groups": {
+        "Dev": [
+            "ansible_host_3"
+        ],
+        "Prod": [
+            "ansible_host_1",
+            "ansible_host_2"
+        ],
+        "all": [
+            "ansible_host_1",
+            "ansible_host_2",
+            "ansible_host_3"
+        ],
+        "ungrouped": []
+    }
+}
+ok: [ansible_host_3] => {
+    "groups": {
+        "Dev": [
+            "ansible_host_3"
+        ],
+        "Prod": [
+            "ansible_host_1",
+            "ansible_host_2"
+        ],
+        "all": [
+            "ansible_host_1",
+            "ansible_host_2",
+            "ansible_host_3"
+        ],
+        "ungrouped": []
+    }
+}
+
+PLAY RECAP *********************************************************************
+ansible_host_1             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+ansible_host_2             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+ansible_host_3             : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
